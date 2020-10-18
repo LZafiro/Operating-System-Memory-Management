@@ -2,7 +2,7 @@
 # By: Luiz Felipe Raveduti Zafiro & Leon Tenório da Silva & Alexandre Andreoli
 
 # Name of the project
-PROJ_NAME = shell
+PROJ_NAME = MMU
 
 # .c files
 C_SOURCE = $(wildcard ./source/*.c)
