@@ -1,8 +1,7 @@
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
-#pragma once
+
 
 typedef uint64_t tipo_identificador;
 
@@ -16,9 +15,11 @@ struct map_virtual_t{
     uint16_t offset_padding:4; // inutilizado, apenas para preenchimento
 	tipo_identificador identificador;
 };
+
 typedef struct map_virtual_t map_virtual_t;
 
 typedef struct Scelula *Tapontador;
+
 typedef struct Scelula{
 	map_virtual_t *info;
 	Tapontador prox;
@@ -39,6 +40,6 @@ map_virtual_t* criacao_no_mapa(
 
 void Tlista_inicia(Tlista *lista);
 
-void Tlista_insere(Tlista *lista,Tapontador anterior, tipo_identificador id, map_virtual_t *x);
+void Tlista_insere(Tlista *lista, Tapontador anterior, tipo_identificador id, map_virtual_t *x);
 
 Tapontador Tlista_localiza(Tlista *lista, tipo_identificador id);

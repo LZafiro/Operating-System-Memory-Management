@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>15
 #include <stdlib.h>
 #include "Tlista.h"
 #include "TMMU.h"
@@ -17,6 +17,7 @@ int main(){
         scanf("%d",&temp);  //tem que fazer cast por o C nao eh capaz de fazer leitura por scanf de unit64
         map_virtual_insere((tipo_identificador)temp);
     }
+    
     for(i=0;i<QUANTIDADE_CONSULTAS;i++){
         scanf("%d", &temp);
         map_virtual_t* consulta = busca_map_virtual((tipo_identificador)temp);
@@ -27,5 +28,6 @@ int main(){
             mostra_map_virtual(consulta);
         }
     }
+
     return 0;
 }
