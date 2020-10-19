@@ -1,4 +1,8 @@
-#include <stdio.h>15
+/* Luiz Felipe Raveduti Zafiro       - RA: 120513 */
+/* Leon Tenório da Silva             - RA: 120488 */
+/* Alexandre Camargo Andreoli        - RA: 119943 */
+
+#include <stdio.h>
 #include <stdlib.h>
 #include "Tlista.h"
 #include "TMMU.h"
@@ -14,8 +18,8 @@ int main(){
 
     //leitura dos address para adicionar
     for(i=0;i<N_ENTRADAS;i++){
-        scanf("%d",&temp);  //tem que fazer cast por o C nao eh capaz de fazer leitura por scanf de unit64
-        map_virtual_insere((tipo_identificador)temp);
+        //scanf("%d",&temp);  //tem que fazer cast por o C nao eh capaz de fazer leitura por scanf de unit64
+        map_virtual_insere((tipo_identificador)rand());
     }
     
     for(i=0;i<QUANTIDADE_CONSULTAS;i++){

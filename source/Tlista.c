@@ -1,3 +1,7 @@
+/* Luiz Felipe Raveduti Zafiro       - RA: 120513 */
+/* Leon Tenório da Silva             - RA: 120488 */
+/* Alexandre Camargo Andreoli        - RA: 119943 */
+
 #include "Tlista.h"
 
 map_virtual_t* criacao_no_mapa(
@@ -5,7 +9,8 @@ map_virtual_t* criacao_no_mapa(
 	int flag_referenciada,
 	int flag_modificada,
 	int flag_protecao,
-	int offset_moldura
+	int offset_moldura,
+	tipo_identificador moldura
 ){
     map_virtual_t* apontador = (map_virtual_t*)malloc(sizeof(map_virtual_t));
 	apontador->flag_cache = flag_cache;
@@ -13,6 +18,7 @@ map_virtual_t* criacao_no_mapa(
 	apontador->flag_modificada = flag_modificada;
 	apontador->flag_protecao = flag_protecao;
 	apontador->offset_moldura = offset_moldura;
+	apontador->moldura = moldura;
     return apontador;
 }
 
@@ -34,7 +40,7 @@ void Tlista_insere(Tlista *lista,Tapontador anterior, tipo_identificador id, map
 	if(novo==NULL)
 		exit (-1);
 	novo->info=x;
-    novo->info->identificador = id;
+    novo->info->endereco_virtual = id;
 	novo->prox=anterior->prox;
 	anterior->prox=novo;
 	lista->tamanho++;
@@ -47,7 +53,7 @@ Tapontador Tlista_localiza(Tlista *lista, tipo_identificador id){
     Tapontador aux = lista->primeiro;
 	int i=0;
 	while(i<lista->tamanho){
-		if(aux->prox->info->identificador==id){
+		if(aux->prox->info->endereco_virtual==id){
 			return aux;
 		}
 		i++;
