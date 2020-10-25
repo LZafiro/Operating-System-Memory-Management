@@ -1,3 +1,7 @@
+/* Luiz Felipe Raveduti Zafiro       - RA: 120513 */
+/* Leon Tenório da Silva             - RA: 120488 */
+/* Alexandre Camargo Andreoli        - RA: 119943 */
+
 #include "Tlista.h"
 
 map_virtual_t* criacao_no_mapa(

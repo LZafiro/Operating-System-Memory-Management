@@ -1,8 +1,11 @@
+/* Luiz Felipe Raveduti Zafiro       - RA: 120513 */
+/* Leon Tenório da Silva             - RA: 120488 */
+/* Alexandre Camargo Andreoli        - RA: 119943 */
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
 #pragma once
-
 
 typedef uint64_t tipo_identificador;
 
